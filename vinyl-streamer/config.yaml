@@ -61,7 +61,7 @@ schema:
   icecast_password: str
   low_latency: bool
   audio_quality:
-    format: "list(MP3 (Default)|AAC|Opus)"
+    format: "list(MP3 (Default)|AAC|Opus|FLAC)"
     samplerate: "list(44100 (Default)|48000)"
     channels: "list(1|2 (Default))"
     bitrate: "list(128|192|256|320 (Default))"
