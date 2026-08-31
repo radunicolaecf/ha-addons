@@ -1,6 +1,6 @@
 name: "Vinyl Streamer"
 description: "Stream audio from USB input to Icecast (FFmpeg + Icecast)"
-version: "2.0.4"
+version: "2.0.5-flac"
 slug: "vinyl-streamer"
 init: false
 arch:
