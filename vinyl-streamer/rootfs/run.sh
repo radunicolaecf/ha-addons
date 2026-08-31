@@ -71,7 +71,7 @@ bashio::log.info "Starting Vinyl Streamer..."
 bashio::log.info "Station: ${STATION_NAME_RAW}"
 bashio::log.info "Mount: ${MOUNT_POINT}"
 bashio::log.info "Audio input: ${AUDIO_DEVICE}"
-bashio::log.info "Format: ${} @ ${AUDIO_BITRATE}kbps"
+bashio::log.info "Format: ${AUDIO_FORMA} @ ${AUDIO_BITRATE}kbps"
 
 # Create directories
 mkdir -p /share/vinyl-streamer
