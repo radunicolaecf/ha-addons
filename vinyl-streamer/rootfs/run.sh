@@ -71,7 +71,7 @@ bashio::log.info "Starting Vinyl Streamer..."
 bashio::log.info "Station: ${STATION_NAME_RAW}"
 bashio::log.info "Mount: ${MOUNT_POINT}"
 bashio::log.info "Audio input: ${AUDIO_DEVICE}"
-bashio::log.info "Format: ${AUDIO_FORMAT} @ ${AUDIO_BITRATE}kbps"
+bashio::log.info "Format: ${} @ ${AUDIO_BITRATE}kbps"
 
 # Create directories
 mkdir -p /share/vinyl-streamer
@@ -534,6 +534,9 @@ while true; do
 
     # Set encoder based on audio format
     case "${AUDIO_FORMAT}" in
+        "FLAC")
+            FFMPEG_CMD="${FFMPEG_CMD} -acodec flac -compression_level 10 -ac ${AUDIO_CHANNELS} -ar ${AUDIO_SAMPLERATE} -content_type application/ogg -f ogg"
+            ;;
         "AAC")
             FFMPEG_CMD="${FFMPEG_CMD} -acodec aac -ab ${AUDIO_BITRATE}k -ac ${AUDIO_CHANNELS} -ar ${AUDIO_SAMPLERATE} -content_type audio/aac -f adts"
             ;;
